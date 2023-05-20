@@ -1,0 +1,78 @@
+# Explorer Mark Request
+
+(You should put an [X] in boxes with completed features.
+Lines starting with ">" are additional comments.)
+
+[X] There is a player is displayed on the screen.
+
+[X] The player can be moved by pressing keys
+> You can use the Up/Down/Left/Right keys to move around. (CHANGE THIS LINE IF IT IS NOT CORRECT)
+
+[X] When the player tries to move off the screen, the screen follows them.
+
+[X] The viewport does not necessarily always move when the player does.
+
+[X] There are at least 5 block types (i.e different coloured blocks).
+
+[X] The layout of the map is specified by a file on the filesystem.
+
+[X] There is a 'barrier' block. When the player attempts to pass through it, they cannot.
+
+[X] There is a 'water' block. When the player walks through the 10th block in a row, they die and the game ends.
+
+[X] There is a 'sign' block. When the player walks over the sign block, a specified message is shown.
+
+[X] There are 'objects' in my game -- when a player walks over the object, it disappears.
+
+[X] There is a quests system in my game.
+[X] The quests system is in a seperate module or crate to the game.
+
+[X] The first quest (walking over sand blocks) is implemented.
+[X] The 'q' key shows the progress of my user in this quest.
+[X] The 'r' key resets progress of my user in this quest.
+
+[X] The second quest (collecting five objects of one type, then three of another)
+[X] The 'q' key shows the progress of my user in this quest.
+[X] The 'r' key resets progress of my user in this quest.
+
+[X] The third quest (at least two of the three subquests) is implemented.
+[X] The 'q' key shows the progress of my user in this quest.
+[X] The 'r' key resets progress of my user in this quest.
+
+[ ] My quests system is designed to make it easy for a developer to add more quests.
+
+## How to Run My Program
+
+Assuming we have taken your crate, without any compilation; what commands will start the game?
+
+> $ cargo run path/to/map.ron first_quest
+> $ cargo run path/to/map.ron second_quest
+> $ cargo run path/to/map.ron third_quest
+
+## Design Excellence
+
+During the assignment we make suggestions for "design excellence". Please list all those
+things you did, and where we can find them in your program.
+
+> - TODO
+I implement three quest in the game, which make the task completion has been checked.
+
+If you made any other design choices you think demonstrate an equivalent level
+of design excellence, please list them below (including where to find them).
+Note, we suggest you check with a tutor that your design is in fact excellent
+before adding something below:
+
+> - TODO
+
+## Design Limitations
+
+If you made any design decisions which you now regret making; but don't to go back and change them,
+let us know here. You can make up your design marks by acknowledging up to 5 things you would do
+differently now.
+
+> - TODO
+1. I try to use trait in the Quest System Features part, but my three questions have different criteria for judging whether the task is completed, so I didn't use trait.
+I believe that if I set all the judgment conditions and let three different tasks use only a part of so many judgment conditions according to the usage scenario, I can achieve all the quest tasks through traits. And this will facilitate the subsequent addition of new quest tasks。
+
+2. I use a emoji char 💭 to represent the 'Sign'. But I found the icon of this emoticon is a bit big. If the player icon move to the 💭's right, although the player is display as usual, but the 💭 may cover it since it was big.But this situation is no problem in the other three directions.
+I think the player icon is display normally and the 💭 is suitable to be a Sign icon, so I did not change it.

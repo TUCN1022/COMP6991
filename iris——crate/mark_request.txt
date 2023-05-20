@@ -1,0 +1,61 @@
+# IRIS Mark Request
+
+(You should put an [X] in boxes with completed features.
+Lines starting with ">" are additional comments.)
+
+[X] The server can be started with the command `cargo run 127.0.0.1 6991`.
+
+[X] When a 'NICK' message is sent, the server stores the relevant information from it.
+[X] When a 'USER' message is sent after a 'NICK', the server replies with a RPL_WELCOME.
+[X] The RPL_WELCOME contains the user's full name from the 'USER' message
+[X] Non-'NICK'/'USER' messages are ignored until the user has sent both.
+
+[X] When a user sends a 'PING' message, an appropriate 'PONG' is sent back.
+
+[X] When a user sends a 'QUIT' message, their connection is dropped.
+
+[X] When a user sends a 'PRIVMSG' message to themselves, it is sent back to them.
+
+[X] Multiple users can join the same server.
+
+[X] Messages can be sent from one user to another.
+
+[X] A user can 'JOIN' a channel.
+
+[X] A user can 'PART' a channel.
+
+[X] All relevant messages sent by users inside a channel are sent to every other member of that channel.
+
+[X] My design never stores messages, and deletes users as soon as they have left the server.
+
+[X] My design never stores messages, and deletes users as soon as they have left the server.
+
+[ ] It is possible to set reminders, using the following command (change this if you'd like)
+> PRIVMSG remindbot :10s tfpk :Remind me of something.
+
+[ ] I have provided an "example" plugin, which explains how somebody
+    else can interface with my plugin system.
+
+## Design Excellence
+
+During the assignment we make suggestions for "design excellence". Please list all those
+things you did, and where we can find them in your program.
+
+> - TODO
+I used logging to record the messages encountered by the server. These messages will not only be recorded and displayed in the server, but also sent to the client to inform the encountered problems when necessary.
+
+If you made any other design choices you think demonstrate an equivalent level
+of design excellence, please list them below (including where to find them).
+Note, we suggest you check with a tutor that your design is in fact excellent
+before adding something below:
+
+> - TODO
+
+## Design Limitations
+
+If you made any design decisions which you now regret making; but don't to go back and change them,
+let us know here. You can make up your design marks by acknowledging up to 5 things you would do
+differently now.
+
+> - TODO
+When I people quit out, other's client in the same channel will receive the quit out message, but if other client have more than one same channel with this quit out client, it will receive more than one quit out message from different channels.
